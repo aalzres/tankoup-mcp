@@ -9,7 +9,7 @@ Submitted from the OpenAI Platform dashboard, "With MCP". Requirements checked a
 - [x] Auth: none (the server is public; it is not a protected server declared as `none`)
 - [x] No server headers to declare
 - [x] Domain verification ready: the server answers `GET /.well-known/openai-apps-challenge` with the token in `OPENAI_APPS_CHALLENGE` (set it on Cloud Run when the dashboard gives one, then redeploy)
-- [ ] Tested in ChatGPT developer mode (screenshots in `docs/screenshots/`)
+- [x] Tested in ChatGPT as a custom MCP server on a Free account (`docs/screenshots/chatgpt-route.png`)
 - [ ] Demo recording, reachable by the reviewer (`demo_recording_url`)
 
 ## Listing

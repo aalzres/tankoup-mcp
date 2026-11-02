@@ -32,7 +32,7 @@ Every answer is short and structured: a few stations, each with its price, dista
 
 **Claude** (claude.ai and Desktop; it then works on mobile too): Customize → Connectors → Add → Add custom connector, and paste `https://mcp.tankoup.com/mcp`.
 
-**ChatGPT**: Settings → Apps → Advanced settings → turn on Developer mode, then Create app with the URL above and no authentication.
+**ChatGPT** (any plan, Free included): Plugins → Add → Add custom MCP server, paste the URL above and pick "No authentication". Then mention `@TankoUp` in a chat.
 
 **Claude Code:**
 
