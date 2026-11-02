@@ -1,0 +1,247 @@
+{
+ "stations": [
+  {
+   "station": {
+    "id": "ES-9231",
+    "name": "COOPERATIVA LUCENA",
+    "brand": "COOPERATIVA LUCENA",
+    "address": "AVENIDA DE LA INFANCIA, 15",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.414083,
+    "lng": -4.4805,
+    "schedule": {
+     "always_open": false,
+     "periods": [
+      {
+       "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+       ],
+       "open": "06:00",
+       "close": "23:00"
+      }
+     ]
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.749,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 1.637,
+   "drive_time_min": 6,
+   "is_open": true,
+   "savings_eur": 4.81
+  },
+  {
+   "station": {
+    "id": "ES-6649",
+    "name": "BALLENOIL",
+    "brand": "BALLENOIL",
+    "address": "CALLE EJIDO DEL VALLE, S/N - JUNTO RECINTO FERIAL, S,N",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.411667,
+    "lng": -4.491917,
+    "schedule": {
+     "always_open": true,
+     "periods": []
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.759,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 0.727,
+   "drive_time_min": 3,
+   "is_open": true,
+   "savings_eur": -0.4
+  },
+  {
+   "station": {
+    "id": "ES-15864",
+    "name": "PLENERGY",
+    "brand": "PLENERGY",
+    "address": "CALLE CONCHA LAGO, S/N",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.407722,
+    "lng": -4.50025,
+    "schedule": {
+     "always_open": true,
+     "periods": []
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.759,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 0.817,
+   "drive_time_min": 3,
+   "is_open": true,
+   "savings_eur": -0.4
+  },
+  {
+   "station": {
+    "id": "ES-15922",
+    "name": "PLENERGY",
+    "brand": "PLENERGY",
+    "address": "CALLE ESPEJO, 21",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.404972,
+    "lng": -4.496111,
+    "schedule": {
+     "always_open": true,
+     "periods": []
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.759,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 1.144,
+   "drive_time_min": 4,
+   "is_open": true,
+   "savings_eur": -0.4
+  },
+  {
+   "station": {
+    "id": "ES-5090",
+    "name": "ENERPLUS",
+    "brand": "ENERPLUS",
+    "address": "AVENIDA DE LA GUARDIA CIVIL, 9",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.405333,
+    "lng": -4.493972,
+    "schedule": {
+     "always_open": true,
+     "periods": []
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.769,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 1.163,
+   "drive_time_min": 5,
+   "is_open": true,
+   "savings_eur": -0.8
+  },
+  {
+   "station": {
+    "id": "ES-13999",
+    "name": "ECONOIL",
+    "brand": "ECONOIL",
+    "address": "CALLE TERUEL, 2",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.380944,
+    "lng": -4.499972,
+    "schedule": {
+     "always_open": true,
+     "periods": []
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.759,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 3.788,
+   "drive_time_min": 7,
+   "is_open": true,
+   "savings_eur": -0.4
+  },
+  {
+   "station": {
+    "id": "ES-14727",
+    "name": "HISPANIA DE CARBURANTES",
+    "brand": "HISPANIA DE CARBURANTES",
+    "address": "AVENIDA DE LA INFANCIA, S/N",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.414361,
+    "lng": -4.481083,
+    "schedule": {
+     "always_open": true,
+     "periods": []
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.779,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 1.584,
+   "drive_time_min": 6,
+   "is_open": true,
+   "savings_eur": -1.2
+  },
+  {
+   "station": {
+    "id": "ES-12206",
+    "name": "SANTO CRISTO",
+    "brand": "SANTO CRISTO",
+    "address": "CARRETERA MONTURQUE MORILES KM. 1",
+    "city": "Monturque",
+    "province": "CÓRDOBA",
+    "lat": 37.470722,
+    "lng": -4.585528,
+    "schedule": {
+     "always_open": false,
+     "periods": [
+      {
+       "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+       ],
+       "open": "06:00",
+       "close": "22:00"
+      }
+     ]
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.749,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 9.836,
+   "drive_time_min": 19,
+   "is_open": true,
+   "savings_eur": 0.0
+  }
+ ],
+ "candidates_considered": 8,
+ "query": {
+  "lat": 37.415,
+  "lng": -4.499,
+  "fuel": "diesel",
+  "radius_km": 10.0
+ }
+}

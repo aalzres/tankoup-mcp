@@ -1,0 +1,183 @@
+{
+ "stations": [
+  {
+   "station": {
+    "id": "ES-9231",
+    "name": "COOPERATIVA LUCENA",
+    "brand": "COOPERATIVA LUCENA",
+    "address": "AVENIDA DE LA INFANCIA, 15",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.414083,
+    "lng": -4.4805,
+    "schedule": {
+     "always_open": false,
+     "periods": [
+      {
+       "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+       ],
+       "open": "06:00",
+       "close": "23:00"
+      }
+     ]
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.749,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 1.637,
+   "drive_time_min": 6,
+   "is_open": true,
+   "savings_eur": 4.81
+  },
+  {
+   "station": {
+    "id": "ES-6649",
+    "name": "BALLENOIL",
+    "brand": "BALLENOIL",
+    "address": "CALLE EJIDO DEL VALLE, S/N - JUNTO RECINTO FERIAL, S,N",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.411667,
+    "lng": -4.491917,
+    "schedule": {
+     "always_open": true,
+     "periods": []
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.759,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 0.727,
+   "drive_time_min": 3,
+   "is_open": true,
+   "savings_eur": -0.4
+  },
+  {
+   "station": {
+    "id": "ES-15864",
+    "name": "PLENERGY",
+    "brand": "PLENERGY",
+    "address": "CALLE CONCHA LAGO, S/N",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.407722,
+    "lng": -4.50025,
+    "schedule": {
+     "always_open": true,
+     "periods": []
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.759,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 0.817,
+   "drive_time_min": 3,
+   "is_open": true,
+   "savings_eur": -0.4
+  },
+  {
+   "station": {
+    "id": "ES-15922",
+    "name": "PLENERGY",
+    "brand": "PLENERGY",
+    "address": "CALLE ESPEJO, 21",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.404972,
+    "lng": -4.496111,
+    "schedule": {
+     "always_open": true,
+     "periods": []
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.759,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 1.144,
+   "drive_time_min": 4,
+   "is_open": true,
+   "savings_eur": -0.4
+  },
+  {
+   "station": {
+    "id": "ES-5090",
+    "name": "ENERPLUS",
+    "brand": "ENERPLUS",
+    "address": "AVENIDA DE LA GUARDIA CIVIL, 9",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.405333,
+    "lng": -4.493972,
+    "schedule": {
+     "always_open": true,
+     "periods": []
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.769,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 1.163,
+   "drive_time_min": 5,
+   "is_open": true,
+   "savings_eur": -0.8
+  },
+  {
+   "station": {
+    "id": "ES-13999",
+    "name": "ECONOIL",
+    "brand": "ECONOIL",
+    "address": "CALLE TERUEL, 2",
+    "city": "Lucena",
+    "province": "CÓRDOBA",
+    "lat": 37.380944,
+    "lng": -4.499972,
+    "schedule": {
+     "always_open": true,
+     "periods": []
+    }
+   },
+   "price": {
+    "fuel_type": "diesel",
+    "amount": 1.759,
+    "currency": "EUR",
+    "updated_at": "2026-11-02T13:48:41Z"
+   },
+   "distance_km": 3.788,
+   "drive_time_min": 7,
+   "is_open": true,
+   "savings_eur": -0.4
+  }
+ ],
+ "route": {
+  "polyline": "_p~iF~ps|U_ulLnnqC_mqNvxq`@",
+  "route_km": 396.4,
+  "duration_min": 245
+ },
+ "candidates_considered": 6,
+ "query": {
+  "fuel": "diesel"
+ }
+}

@@ -1,0 +1,29 @@
+[project]
+name = "tankoup-mcp"
+version = "0.1.0"
+description = "MCP server for TankoUp: the cheapest fuel in Spain, for Claude, ChatGPT and any MCP client."
+readme = "README.md"
+authors = [
+    { name = "aalzres", email = "45148277+aalzres@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28,<0.29",
+    "mcp==2.3.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "anyio>=4.16.0",
+    "pytest>=9.2.0",
+    "respx>=0.23.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = ["ignore::DeprecationWarning"]

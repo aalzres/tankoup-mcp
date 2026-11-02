@@ -1,0 +1,666 @@
+{
+ "slug": "bizkaia",
+ "name": "Bizkaia",
+ "station_count": 133,
+ "generated_at": "2026-11-02T13:49:01.227565Z",
+ "fuels": {
+  "diesel": {
+   "current_avg": 1.929,
+   "current_min": 1.689,
+   "station_count": 129,
+   "cheapest_stations": [
+    {
+     "id": "ES-158",
+     "name": "BALLENOIL",
+     "brand": "BALLENOIL",
+     "address": "CARRETERA N-634 KM. 76,4",
+     "city": "Berriz",
+     "lat": 43.166722,
+     "lng": -2.58525,
+     "price": 1.689
+    },
+    {
+     "id": "ES-160",
+     "name": "ALCAMPO",
+     "brand": "ALCAMPO",
+     "address": "CARRETERA ELORRIO KM. S/N",
+     "city": "Durango",
+     "lat": 43.164944,
+     "lng": -2.620333,
+     "price": 1.709
+    },
+    {
+     "id": "ES-15883",
+     "name": "PETROPRIX",
+     "brand": "PETROPRIX",
+     "address": "POLIGONO GOITONDO-BEKOA, 22",
+     "city": "Mallabia",
+     "lat": 43.200472,
+     "lng": -2.531361,
+     "price": 1.709
+    },
+    {
+     "id": "ES-155",
+     "name": "EROSKI",
+     "brand": "EROSKI",
+     "address": "BARRIO MURUETA, S/N",
+     "city": "Abadiño",
+     "lat": 43.171889,
+     "lng": -2.618111,
+     "price": 1.729
+    },
+    {
+     "id": "ES-13503",
+     "name": "EROSKI",
+     "brand": "EROSKI",
+     "address": "BARRIO SAN AGUSTIN, S/N",
+     "city": "Elorrio",
+     "lat": 43.130194,
+     "lng": -2.562639,
+     "price": 1.729
+    }
+   ],
+   "priciest_stations": [
+    {
+     "id": "ES-224",
+     "name": "PETRONOR",
+     "brand": "PETRONOR",
+     "address": "CL AMBASAGUAS, 7",
+     "city": "Karrantza Harana/Valle de Carranza",
+     "lat": 43.238139,
+     "lng": -3.355694,
+     "price": 2.059
+    },
+    {
+     "id": "ES-159",
+     "name": "MOEVE",
+     "brand": "MOEVE",
+     "address": "BARRIO EL BAULAR, 11",
+     "city": "Zalla",
+     "lat": 43.212361,
+     "lng": -3.126639,
+     "price": 2.049
+    },
+    {
+     "id": "ES-245",
+     "name": "PETRONOR",
+     "brand": "PETRONOR",
+     "address": "AT A-8, 131",
+     "city": "Abanto y Ciérvana-Abanto Zierbena",
+     "lat": 43.327111,
+     "lng": -3.067722,
+     "price": 2.039
+    },
+    {
+     "id": "ES-9933",
+     "name": "E.S.EL CAMPILLO",
+     "brand": "E.S.EL CAMPILLO",
+     "address": "POL.IND. EL CAMPILLO, PARC. 1-2 FASE II",
+     "city": "Abanto y Ciérvana-Abanto Zierbena",
+     "lat": 43.307222,
+     "lng": -3.078528,
+     "price": 2.039
+    },
+    {
+     "id": "ES-244",
+     "name": "PETRONOR",
+     "brand": "PETRONOR",
+     "address": "AT A-8, 131",
+     "city": "Abanto y Ciérvana-Abanto Zierbena",
+     "lat": 43.3285,
+     "lng": -3.068806,
+     "price": 2.039
+    }
+   ],
+   "trend_30d_pct": null,
+   "vs_national_pct": 1.7,
+   "cheapest_brand": {
+    "name": "PETROPRIX",
+    "avg_price": 1.737,
+    "station_count": 2
+   },
+   "priciest_brand": {
+    "name": "MOEVE",
+    "avg_price": 2.028,
+    "station_count": 5
+   },
+   "history": [
+    {
+     "date": "2026-11-02",
+     "avg_price": 1.929
+    }
+   ]
+  },
+  "diesel_premium": {
+   "current_avg": 1.951,
+   "current_min": 1.699,
+   "station_count": 46,
+   "cheapest_stations": [
+    {
+     "id": "ES-158",
+     "name": "BALLENOIL",
+     "brand": "BALLENOIL",
+     "address": "CARRETERA N-634 KM. 76,4",
+     "city": "Berriz",
+     "lat": 43.166722,
+     "lng": -2.58525,
+     "price": 1.699
+    },
+    {
+     "id": "ES-160",
+     "name": "ALCAMPO",
+     "brand": "ALCAMPO",
+     "address": "CARRETERA ELORRIO KM. S/N",
+     "city": "Durango",
+     "lat": 43.164944,
+     "lng": -2.620333,
+     "price": 1.729
+    },
+    {
+     "id": "ES-11516",
+     "name": "BALLENOIL",
+     "brand": "BALLENOIL",
+     "address": "POLIGONO GRANADA, S/N",
+     "city": "Ortuella",
+     "lat": 43.305833,
+     "lng": -3.045,
+     "price": 1.749
+    },
+    {
+     "id": "ES-10244",
+     "name": "EASYGAS",
+     "brand": "EASYGAS",
+     "address": "CARRETERA N-634 KM. 96,700",
+     "city": "Galdakao",
+     "lat": 43.23175,
+     "lng": -2.791056,
+     "price": 1.809
+    },
+    {
+     "id": "ES-13459",
+     "name": "ALCAMPO",
+     "brand": "ALCAMPO",
+     "address": "CALLE ARITZ BIDEA, S/N",
+     "city": "Mungia",
+     "lat": 43.354389,
+     "lng": -2.839833,
+     "price": 1.809
+    }
+   ],
+   "priciest_stations": [
+    {
+     "id": "ES-224",
+     "name": "PETRONOR",
+     "brand": "PETRONOR",
+     "address": "CL AMBASAGUAS, 7",
+     "city": "Karrantza Harana/Valle de Carranza",
+     "lat": 43.238139,
+     "lng": -3.355694,
+     "price": 2.159
+    },
+    {
+     "id": "ES-9933",
+     "name": "E.S.EL CAMPILLO",
+     "brand": "E.S.EL CAMPILLO",
+     "address": "POL.IND. EL CAMPILLO, PARC. 1-2 FASE II",
+     "city": "Abanto y Ciérvana-Abanto Zierbena",
+     "lat": 43.307222,
+     "lng": -3.078528,
+     "price": 2.139
+    },
+    {
+     "id": "ES-159",
+     "name": "MOEVE",
+     "brand": "MOEVE",
+     "address": "BARRIO EL BAULAR, 11",
+     "city": "Zalla",
+     "lat": 43.212361,
+     "lng": -3.126639,
+     "price": 2.119
+    },
+    {
+     "id": "ES-12025",
+     "name": "AVIA  USOA",
+     "brand": "AVIA  USOA",
+     "address": "POLIGONO ZONA COMERCIAL AEROPUERTO LOIU, 9",
+     "city": "Derio",
+     "lat": 43.306083,
+     "lng": -2.900389,
+     "price": 2.095
+    },
+    {
+     "id": "ES-166",
+     "name": "MOEVE",
+     "brand": "MOEVE",
+     "address": "BARRIO IBARRETA, SN",
+     "city": "Basauri",
+     "lat": 43.231333,
+     "lng": -2.886417,
+     "price": 2.089
+    }
+   ],
+   "trend_30d_pct": null,
+   "vs_national_pct": -1.9,
+   "cheapest_brand": {
+    "name": "BALLENOIL",
+    "avg_price": 1.755,
+    "station_count": 3
+   },
+   "priciest_brand": {
+    "name": "MOEVE",
+    "avg_price": 2.09,
+    "station_count": 4
+   },
+   "history": [
+    {
+     "date": "2026-11-02",
+     "avg_price": 1.951
+    }
+   ]
+  },
+  "lpg": {
+   "current_avg": 1.177,
+   "current_min": 1.149,
+   "station_count": 11,
+   "cheapest_stations": [
+    {
+     "id": "ES-12025",
+     "name": "AVIA  USOA",
+     "brand": "AVIA  USOA",
+     "address": "POLIGONO ZONA COMERCIAL AEROPUERTO LOIU, 9",
+     "city": "Derio",
+     "lat": 43.306083,
+     "lng": -2.900389,
+     "price": 1.149
+    },
+    {
+     "id": "ES-203",
+     "name": "PETRONOR",
+     "brand": "PETRONOR",
+     "address": "CR A-8  BILBAO BEHOBIA P.K. 99,7",
+     "city": "Amorebieta-Etxano",
+     "lat": 43.231556,
+     "lng": -2.756306,
+     "price": 1.159
+    },
+    {
+     "id": "ES-204",
+     "name": "PETRONOR",
+     "brand": "PETRONOR",
+     "address": "CR A-8 BILBAO-BEHOBIA ,P.K. 100",
+     "city": "Amorebieta-Etxano",
+     "lat": 43.230083,
+     "lng": -2.754028,
+     "price": 1.159
+    },
+    {
+     "id": "ES-208",
+     "name": "PETRONOR",
+     "brand": "PETRONOR",
+     "address": "AU AP-68, 6",
+     "city": "Arrigorriaga",
+     "lat": 43.190194,
+     "lng": -2.897389,
+     "price": 1.159
+    },
+    {
+     "id": "ES-14281",
+     "name": "REPSOL",
+     "brand": "REPSOL",
+     "address": "CALLE KISKENE, 1",
+     "city": "Berango",
+     "lat": 43.372528,
+     "lng": -2.996639,
+     "price": 1.175
+    }
+   ],
+   "priciest_stations": [
+    {
+     "id": "ES-244",
+     "name": "PETRONOR",
+     "brand": "PETRONOR",
+     "address": "AT A-8, 131",
+     "city": "Abanto y Ciérvana-Abanto Zierbena",
+     "lat": 43.3285,
+     "lng": -3.068806,
+     "price": 1.195
+    },
+    {
+     "id": "ES-246",
+     "name": "REPSOL",
+     "brand": "REPSOL",
+     "address": "CL DE LA RIBERA , 11",
+     "city": "Barakaldo",
+     "lat": 43.292806,
+     "lng": -3.004722,
+     "price": 1.195
+    },
+    {
+     "id": "ES-186",
+     "name": "PETRONOR",
+     "brand": "PETRONOR",
+     "address": "CARRETERA BI-631 KM. 10",
+     "city": "Derio",
+     "lat": 43.318583,
+     "lng": -2.876444,
+     "price": 1.195
+    },
+    {
+     "id": "ES-202",
+     "name": "REPSOL",
+     "brand": "REPSOL",
+     "address": "CARRETERA BI-3745 KM. 9,2",
+     "city": "Sestao",
+     "lat": 43.298528,
+     "lng": -3.003167,
+     "price": 1.195
+    },
+    {
+     "id": "ES-10848",
+     "name": "URKIOIL",
+     "brand": "URKIOIL",
+     "address": "CARRETERA FORAL BI-VI ,623 KM. 44",
+     "city": "Otxandio",
+     "lat": 43.063139,
+     "lng": -2.661972,
+     "price": 1.189
+    }
+   ],
+   "trend_30d_pct": null,
+   "vs_national_pct": 6.9,
+   "cheapest_brand": {
+    "name": "PETRONOR",
+    "avg_price": 1.174,
+    "station_count": 6
+   },
+   "priciest_brand": {
+    "name": "REPSOL",
+    "avg_price": 1.188,
+    "station_count": 3
+   },
+   "history": [
+    {
+     "date": "2026-11-02",
+     "avg_price": 1.177
+    }
+   ]
+  },
+  "sp95": {
+   "current_avg": 1.743,
+   "current_min": 1.499,
+   "station_count": 127,
+   "cheapest_stations": [
+    {
+     "id": "ES-158",
+     "name": "BALLENOIL",
+     "brand": "BALLENOIL",
+     "address": "CARRETERA N-634 KM. 76,4",
+     "city": "Berriz",
+     "lat": 43.166722,
+     "lng": -2.58525,
+     "price": 1.499
+    },
+    {
+     "id": "ES-11516",
+     "name": "BALLENOIL",
+     "brand": "BALLENOIL",
+     "address": "POLIGONO GRANADA, S/N",
+     "city": "Ortuella",
+     "lat": 43.305833,
+     "lng": -3.045,
+     "price": 1.499
+    },
+    {
+     "id": "ES-13503",
+     "name": "EROSKI",
+     "brand": "EROSKI",
+     "address": "BARRIO SAN AGUSTIN, S/N",
+     "city": "Elorrio",
+     "lat": 43.130194,
+     "lng": -2.562639,
+     "price": 1.589
+    },
+    {
+     "id": "ES-14015",
+     "name": "EUSKADILOWCOST",
+     "brand": "EUSKADILOWCOST",
+     "address": "CARRETERA 634 PK 77,310 KM  DONOSTIA/SAN SEBASTAIN A SANTANDER Y LA CORUÑA POL IND EITUA Nº71 KM. 77,310",
+     "city": "Berriz",
+     "lat": 43.166306,
+     "lng": -2.595917,
+     "price": 1.598
+    },
+    {
+     "id": "ES-156",
+     "name": "EROSKI",
+     "brand": "EROSKI",
+     "address": "CALLE KAREAGA, 40",
+     "city": "Barakaldo",
+     "lat": 43.287194,
+     "lng": -3.004194,
+     "price": 1.599
+    }
+   ],
+   "priciest_stations": [
+    {
+     "id": "ES-10243",
+     "name": "GAMIZ",
+     "brand": "GAMIZ",
+     "address": "CARRETERA BI-3102 KM. 18,000",
+     "city": "Mungia",
+     "lat": 43.336472,
+     "lng": -2.835083,
+     "price": 1.869
+    },
+    {
+     "id": "ES-12025",
+     "name": "AVIA  USOA",
+     "brand": "AVIA  USOA",
+     "address": "POLIGONO ZONA COMERCIAL AEROPUERTO LOIU, 9",
+     "city": "Derio",
+     "lat": 43.306083,
+     "lng": -2.900389,
+     "price": 1.865
+    },
+    {
+     "id": "ES-214",
+     "name": "REPSOL",
+     "brand": "REPSOL",
+     "address": "AVENIDA IPARRAGUIRRE, 21",
+     "city": "Leioa",
+     "lat": 43.320444,
+     "lng": -2.976194,
+     "price": 1.859
+    },
+    {
+     "id": "ES-215",
+     "name": "REPSOL",
+     "brand": "REPSOL",
+     "address": "AVENIDA IPARRAGUIRRE, 108",
+     "city": "Leioa",
+     "lat": 43.319444,
+     "lng": -2.97575,
+     "price": 1.859
+    },
+    {
+     "id": "ES-159",
+     "name": "MOEVE",
+     "brand": "MOEVE",
+     "address": "BARRIO EL BAULAR, 11",
+     "city": "Zalla",
+     "lat": 43.212361,
+     "lng": -3.126639,
+     "price": 1.854
+    }
+   ],
+   "trend_30d_pct": null,
+   "vs_national_pct": 1.2,
+   "cheapest_brand": {
+    "name": "BALLENOIL",
+    "avg_price": 1.561,
+    "station_count": 4
+   },
+   "priciest_brand": {
+    "name": "MOEVE",
+    "avg_price": 1.838,
+    "station_count": 5
+   },
+   "history": [
+    {
+     "date": "2026-11-02",
+     "avg_price": 1.743
+    }
+   ]
+  },
+  "sp98": {
+   "current_avg": 1.912,
+   "current_min": 1.739,
+   "station_count": 68,
+   "cheapest_stations": [
+    {
+     "id": "ES-160",
+     "name": "ALCAMPO",
+     "brand": "ALCAMPO",
+     "address": "CARRETERA ELORRIO KM. S/N",
+     "city": "Durango",
+     "lat": 43.164944,
+     "lng": -2.620333,
+     "price": 1.739
+    },
+    {
+     "id": "ES-15",
+     "name": "AVIA AJARTE",
+     "brand": "AVIA AJARTE",
+     "address": "AVENIDA AIXARTE,",
+     "city": "Arrigorriaga",
+     "lat": 43.201194,
+     "lng": -2.898583,
+     "price": 1.779
+    },
+    {
+     "id": "ES-13500",
+     "name": "ARRIBIDE",
+     "brand": "ARRIBIDE",
+     "address": "POLIGONO ARRIANDI, 1",
+     "city": "Iurreta",
+     "lat": 43.182722,
+     "lng": -2.66125,
+     "price": 1.779
+    },
+    {
+     "id": "ES-11144",
+     "name": "AVIA",
+     "brand": "AVIA",
+     "address": "CTRA. GERNIKA-AMOREBIETA km KM 1,5",
+     "city": "Gernika-Lumo",
+     "lat": 43.2965,
+     "lng": -2.686944,
+     "price": 1.789
+    },
+    {
+     "id": "ES-14167",
+     "name": "EUSKADILOWCOST",
+     "brand": "EUSKADILOWCOST",
+     "address": "POLIGONO POLIGONO INDUSTRIAL S1-2 BALLONTI, 2",
+     "city": "Ortuella",
+     "lat": 43.31325,
+     "lng": -3.029444,
+     "price": 1.797
+    }
+   ],
+   "priciest_stations": [
+    {
+     "id": "ES-15158",
+     "name": "COSTCO",
+     "brand": "COSTCO",
+     "address": "AVENIDA BABCOCK WILCOX  POLIGONO IBARZAHARRA, 2,4,6",
+     "city": "Sestao",
+     "lat": 43.303444,
+     "lng": -3.004222,
+     "price": 1.972
+    },
+    {
+     "id": "ES-10243",
+     "name": "GAMIZ",
+     "brand": "GAMIZ",
+     "address": "CARRETERA BI-3102 KM. 18,000",
+     "city": "Mungia",
+     "lat": 43.336472,
+     "lng": -2.835083,
+     "price": 1.97
+    },
+    {
+     "id": "ES-12025",
+     "name": "AVIA  USOA",
+     "brand": "AVIA  USOA",
+     "address": "POLIGONO ZONA COMERCIAL AEROPUERTO LOIU, 9",
+     "city": "Derio",
+     "lat": 43.306083,
+     "lng": -2.900389,
+     "price": 1.965
+    },
+    {
+     "id": "ES-228",
+     "name": "REPSOL",
+     "brand": "REPSOL",
+     "address": "CR N-634, 127,2",
+     "city": "Abanto y Ciérvana-Abanto Zierbena",
+     "lat": 43.321861,
+     "lng": -3.068056,
+     "price": 1.959
+    },
+    {
+     "id": "ES-166",
+     "name": "MOEVE",
+     "brand": "MOEVE",
+     "address": "BARRIO IBARRETA, SN",
+     "city": "Basauri",
+     "lat": 43.231333,
+     "lng": -2.886417,
+     "price": 1.959
+    }
+   ],
+   "trend_30d_pct": null,
+   "vs_national_pct": 0.9,
+   "cheapest_brand": {
+    "name": "SHELL",
+    "avg_price": 1.839,
+    "station_count": 3
+   },
+   "priciest_brand": {
+    "name": "REPSOL",
+    "avg_price": 1.928,
+    "station_count": 26
+   },
+   "history": [
+    {
+     "date": "2026-11-02",
+     "avg_price": 1.912
+    }
+   ]
+  }
+ },
+ "municipalities": [
+  {
+   "slug": "bilbao",
+   "name": "Bilbao",
+   "station_count": 10,
+   "lat": 43.269,
+   "lng": -2.946
+  },
+  {
+   "slug": "galdakao",
+   "name": "Galdakao",
+   "station_count": 6,
+   "lat": 43.233,
+   "lng": -2.823
+  },
+  {
+   "slug": "mungia",
+   "name": "Mungia",
+   "station_count": 6,
+   "lat": 43.359,
+   "lng": -2.839
+  }
+ ]
+}

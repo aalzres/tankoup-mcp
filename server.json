@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.aalzres/tankoup",
+  "title": "TankoUp",
+  "description": "Cheapest fuel in Spain: live prices at ~12,000 petrol stations, near a place or along a route.",
+  "version": "0.1.0",
+  "websiteUrl": "https://github.com/aalzres/tankoup-mcp",
+  "repository": {
+    "url": "https://github.com/aalzres/tankoup-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://tankoup.com/apple-icon.png",
+      "mimeType": "image/png",
+      "sizes": ["180x180"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.tankoup.com/mcp"
+    }
+  ]
+}
