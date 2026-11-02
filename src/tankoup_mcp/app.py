@@ -51,15 +51,13 @@ async def openai_apps_challenge(request: Request) -> Response:
 def client_ip(scope: Scope) -> str:
     """The caller's IP, for rate limiting.
 
-    Behind Cloudflare (mcp.tankoup.com) the caller is CF-Connecting-IP and the
-    last X-Forwarded-For hop is a Cloudflare edge. Without it (the run.app
-    URL), Cloud Run's front end appends the caller as the last hop. A forged
-    CF-Connecting-IP only moves a caller between per-IP buckets; the
-    per-instance limit still holds.
+    Cloud Run's front end appends the caller as the last X-Forwarded-For hop,
+    after anything the caller sent, so a forged header changes nothing
+    (checked in production: 125 requests with a different forged IP each were
+    cut off at 120). mcp.tankoup.com points at Cloud Run directly, with no
+    proxy in between that would put its own address there.
     """
     headers = dict(scope.get("headers", []))
-    if b"cf-connecting-ip" in headers:
-        return headers[b"cf-connecting-ip"].decode("latin-1").strip()
     if b"x-forwarded-for" in headers:
         return headers[b"x-forwarded-for"].decode("latin-1").split(",")[-1].strip()
     client = scope.get("client")

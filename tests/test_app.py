@@ -111,6 +111,6 @@ def test_client_ip_trusts_only_the_last_forwarded_hop():
     assert client_ip({"headers": [], "client": ("10.0.0.1", 1)}) == "10.0.0.1"
 
 
-def test_client_ip_behind_cloudflare_is_the_connecting_ip():
-    scope = {"headers": [(b"x-forwarded-for", b"198.51.100.7, 162.158.1.1"), (b"cf-connecting-ip", b"198.51.100.7")]}
-    assert client_ip(scope) == "198.51.100.7"
+def test_client_ip_ignores_a_forged_cloudflare_header():
+    scope = {"headers": [(b"x-forwarded-for", b"203.0.113.9"), (b"cf-connecting-ip", b"6.6.6.6")]}
+    assert client_ip(scope) == "203.0.113.9"
