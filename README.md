@@ -96,6 +96,12 @@ uv run pytest
 
 Every tool is tested against a mocked API with real response shapes, plus the HTTP layer: a legacy client's handshake and tool call, rate limits, CORS and health.
 
+Against a running server, `scripts/smoke.py` calls every tool once:
+
+```bash
+uv run python scripts/smoke.py https://mcp.tankoup.com/mcp
+```
+
 ### Deploy
 
 ```bash
