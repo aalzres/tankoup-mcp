@@ -30,7 +30,7 @@ Every answer is short and structured: a few stations, each with its price, dista
 
 ## Connect
 
-**Claude** (claude.ai, Desktop and mobile): Settings → Connectors → Add custom connector, and paste `https://mcp.tankoup.com/mcp`.
+**Claude** (claude.ai and Desktop; it then works on mobile too): Customize → Connectors → Add → Add custom connector, and paste `https://mcp.tankoup.com/mcp`.
 
 **ChatGPT**: Settings → Apps → Advanced settings → turn on Developer mode, then Create app with the URL above and no authentication.
 
@@ -42,7 +42,7 @@ claude mcp add --transport http tankoup https://mcp.tankoup.com/mcp
 
 **Any other client** that speaks Streamable HTTP: point it at `https://mcp.tankoup.com/mcp`.
 
-![The server in MCP Inspector](docs/screenshots/inspector-local-nearby.jpg)
+![Claude answering with the TankoUp connector](docs/screenshots/claude-nearby.png)
 
 ## How it works
 

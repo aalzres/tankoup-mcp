@@ -12,7 +12,7 @@ Submitted at <https://claude.ai/directory/manage> → Submit new → MCP connect
 - [x] Responses are short: at most 10 stations, 5 by default
 - [x] Calls only TankoUp's own API (first party)
 - [x] Tested in MCP Inspector
-- [ ] Tested as a custom connector in Claude (screenshots in `docs/screenshots/`)
+- [x] Tested as a custom connector in Claude: all four tools, in English and Spanish (screenshots in `docs/screenshots/claude-*.png`)
 - [ ] Privacy policy covers the MCP server (section to add to tankoup.com: `directories/privacy-section.md`)
 
 ## 1. Connection
