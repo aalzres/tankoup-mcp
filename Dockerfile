@@ -22,5 +22,6 @@ EXPOSE 8080
 
 ENV PATH="/app/.venv/bin:$PATH"
 # PORT is set by Cloud Run. The rate limiter reads X-Forwarded-For itself;
-# --proxy-headers only makes the app see https, so its links say https.
-CMD ["sh", "-c", "uvicorn tankoup_mcp.app:app --host 0.0.0.0 --port ${PORT:-8080} --proxy-headers --forwarded-allow-ips=*"]
+# --proxy-headers only makes the app see https, so its links say https. Cloud
+# Run already logs every request; uvicorn need not log them again.
+CMD ["sh", "-c", "uvicorn tankoup_mcp.app:app --host 0.0.0.0 --port ${PORT:-8080} --proxy-headers --forwarded-allow-ips=* --no-access-log"]
