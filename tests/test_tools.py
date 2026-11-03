@@ -28,6 +28,9 @@ async def test_lists_four_read_only_tools_with_titles(client: Client):
         assert tool.annotations.read_only_hint is True
         assert tool.annotations.destructive_hint is None
         assert tool.output_schema is not None
+        assert "$defs" not in tool.input_schema
+        for name, param in tool.input_schema["properties"].items():
+            assert "type" in param or "anyOf" in param, f"{tool.name}.{name} has no type"
 
 
 # --- find_cheapest_fuel_nearby ----------------------------------------------

@@ -8,7 +8,7 @@ from datetime import datetime
 from importlib.metadata import version
 from typing import Annotated, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, WithJsonSchema
 
 from mcp.server import MCPServer
 from mcp.server.context import CallNext, HandlerResult, ServerRequestContext
@@ -184,6 +184,11 @@ class Location(BaseModel):
     )
     lat: float | None = Field(default=None, ge=-90, le=90, description="Latitude, with lng, for any point.")
     lng: float | None = Field(default=None, ge=-180, le=180, description="Longitude, with lat.")
+
+
+# Written out where it is used instead of as a $ref: the Claude directory's checker and some clients
+# do not follow $defs, and see a parameter with no type.
+InlineLocation = Annotated[Location, WithJsonSchema(Location.model_json_schema())]
 
 
 # --- Helpers ----------------------------------------------------------------
@@ -378,8 +383,8 @@ route_budget = _RouteBudget(settings.route_daily_limit)
     annotations=ToolAnnotations(title="Cheapest fuel along a route", **READ_ONLY),
 )
 async def find_cheapest_fuel_on_route(
-    origin: Annotated[Location, Field(description="Where the trip starts: a place name, or lat/lng.")],
-    destination: Annotated[Location, Field(description="Where the trip ends: a place name, or lat/lng.")],
+    origin: Annotated[InlineLocation, Field(description="Where the trip starts: a place name, or lat/lng.")],
+    destination: Annotated[InlineLocation, Field(description="Where the trip ends: a place name, or lat/lng.")],
     fuel: Annotated[Fuel, Field(description=FUEL_DESCRIPTION)],
     open_now: Annotated[bool, Field(description="Only stations open right now (unknown hours count as open).")] = False,
     limit: Annotated[int, Field(ge=1, le=10, description="How many stations to return.")] = 5,
