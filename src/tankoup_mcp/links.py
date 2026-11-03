@@ -1,8 +1,19 @@
-"""Links to tankoup.com and to turn-by-turn directions."""
+"""Links to tankoup.com, to the app stores and to turn-by-turn directions."""
 
 from urllib.parse import urlencode
 
 SITE = "https://tankoup.com"
+
+# Tags every link into TankoUp, so its analytics can tell visits and installs that came through an
+# AI assistant. Google Maps links stay untagged: they are not ours.
+UTM = {"utm_source": "mcp", "utm_medium": "assistant"}
+
+# Spanish storefront, as on tankoup.com: Apple 404s the country-less form.
+APP_STORE_URL = "https://apps.apple.com/es/app/tankoup/id6789885475"
+
+# The Play Store hands `referrer` to the install, where Firebase Analytics reads the UTM tags.
+GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?" + urlencode(
+    {"id": "com.tankoup.app", "referrer": urlencode(UTM)})
 
 # The website's content pages name fuels with these slugs (tanko-web, FUEL_SLUGS).
 FUEL_SLUGS = {
@@ -17,16 +28,17 @@ FUEL_SLUGS = {
 
 def station_url(station_id: str, fuel: str | None = None) -> str:
     """Opens the station in the TankoUp web app, or in the native app where installed."""
-    query = {"station": station_id} | ({"fuel": fuel} if fuel else {})
+    query = {"station": station_id} | ({"fuel": fuel} if fuel else {}) | UTM
     return f"{SITE}/es/app?{urlencode(query)}"
 
 
 def province_url(province_slug: str, fuel: str | None = None) -> str:
-    return f"{SITE}/es/gasolineras/{province_slug}" + (f"/{FUEL_SLUGS[fuel]}" if fuel else "")
+    path = f"/es/gasolineras/{province_slug}" + (f"/{FUEL_SLUGS[fuel]}" if fuel else "")
+    return f"{SITE}{path}?{urlencode(UTM)}"
 
 
 def municipality_url(province_slug: str, municipality_slug: str) -> str:
-    return f"{SITE}/es/gasolineras/{province_slug}/{municipality_slug}"
+    return f"{SITE}/es/gasolineras/{province_slug}/{municipality_slug}?{urlencode(UTM)}"
 
 
 def directions_url(lat: float, lng: float, origin: tuple[float, float] | None = None,

@@ -28,6 +28,7 @@ async def test_lists_four_read_only_tools_with_titles(client: Client):
         assert tool.annotations.read_only_hint is True
         assert tool.annotations.destructive_hint is None
         assert tool.output_schema is not None
+        assert {"app_store_url", "google_play_url"} <= tool.output_schema["properties"].keys()
         assert "$defs" not in tool.input_schema
         for name, param in tool.input_schema["properties"].items():
             assert "type" in param or "anyOf" in param, f"{tool.name}.{name} has no type"
@@ -55,11 +56,27 @@ async def test_nearby_resolves_a_town_and_returns_the_best_stations(client: Clie
     first = out["stations"][0]
     assert first["id"] == "ES-9231"
     assert first["price_eur_per_litre"] == 1.749
-    assert first["tankoup_url"] == "https://tankoup.com/es/app?station=ES-9231&fuel=diesel"
+    assert first["tankoup_url"] == "https://tankoup.com/es/app?station=ES-9231&fuel=diesel&utm_source=mcp&utm_medium=assistant"
     assert first["directions_url"].startswith("https://www.google.com/maps/dir/?api=1&destination=37.41")
-    assert out["more_on_tankoup"] == "https://tankoup.com/es/gasolineras/cordoba/lucena"
+    assert out["more_on_tankoup"] == "https://tankoup.com/es/gasolineras/cordoba/lucena?utm_source=mcp&utm_medium=assistant"
     assert 1.7 < out["area_average_eur_per_litre"] < 1.9
     assert out["best_saves_eur_on_40_litres"] >= 0
+
+
+async def test_results_link_to_the_app_and_tag_links_into_tankoup(client: Client, upstream):
+    upstream.get("/v1/cheapest/area").respond(json=fixture("area"))
+
+    result = await client.call_tool("find_cheapest_fuel_nearby", {"fuel": "diesel", "place": "Lucena, Córdoba"})
+
+    out = result.structured_content
+    assert out["app_store_url"] == "https://apps.apple.com/es/app/tankoup/id6789885475"
+    assert out["google_play_url"] == (
+        "https://play.google.com/store/apps/details?id=com.tankoup.app"
+        "&referrer=utm_source%3Dmcp%26utm_medium%3Dassistant"
+    )
+    ours = [s["tankoup_url"] for s in out["stations"]] + [out["more_on_tankoup"]]
+    assert all(url.endswith("utm_source=mcp&utm_medium=assistant") for url in ours)
+    assert not any("utm_" in s["directions_url"] for s in out["stations"])
 
 
 async def test_nearby_takes_coordinates_and_open_now(client: Client, upstream):
@@ -223,7 +240,7 @@ async def test_province_by_its_old_spanish_name_for_one_fuel(client: Client, ups
     assert sp95["average_eur_per_litre"] == 1.743 and sp95["lowest_eur_per_litre"] == 1.499
     assert sp95["cheapest_brand"].startswith("BALLENOIL")
     assert len(sp95["cheapest_stations"]) == 3
-    assert out["more_on_tankoup"] == "https://tankoup.com/es/gasolineras/bizkaia/gasolina-95"
+    assert out["more_on_tankoup"] == "https://tankoup.com/es/gasolineras/bizkaia/gasolina-95?utm_source=mcp&utm_medium=assistant"
 
 
 async def test_province_without_a_fuel_returns_every_fuel(client: Client, upstream):
@@ -233,7 +250,7 @@ async def test_province_without_a_fuel_returns_every_fuel(client: Client, upstre
 
     fuels = [f["fuel"] for f in result.structured_content["fuels"]]
     assert set(fuels) == set(fixture("province")["fuels"])
-    assert result.structured_content["more_on_tankoup"] == "https://tankoup.com/es/gasolineras/bizkaia"
+    assert result.structured_content["more_on_tankoup"] == "https://tankoup.com/es/gasolineras/bizkaia?utm_source=mcp&utm_medium=assistant"
 
 
 async def test_province_rejects_a_name_that_is_not_one(client: Client):
@@ -258,7 +275,7 @@ async def test_station_details_with_hours_prices_and_distance(client: Client, up
     assert out["opening_hours"] == "Mon–Sun 06:00–22:00"
     assert [p["fuel"] for p in out["prices"]] == ["diesel", "diesel_premium", "sp95", "sp98"]
     assert out["distance_km"] == 12.3
-    assert out["tankoup_url"] == "https://tankoup.com/es/app?station=ES-6493"
+    assert out["tankoup_url"] == "https://tankoup.com/es/app?station=ES-6493&utm_source=mcp&utm_medium=assistant"
 
 
 async def test_station_details_for_an_unknown_id(client: Client, upstream):

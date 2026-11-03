@@ -26,7 +26,7 @@ Stations are ranked by total cost, not by pump price alone: the price of a 40 L 
 
 Places are Spanish towns and cities by name ("Lucena, Córdoba", "San Sebastián", "Palma"), resolved against every municipality with a fuel station. For a street, a landmark or the user's position, the client passes latitude and longitude.
 
-Every answer is short and structured: a few stations, each with its price, distance, whether it is open now, a link to open it in TankoUp and a Google Maps directions link.
+Every answer is short and structured: a few stations, each with its price, distance, whether it is open now, a link to open it in TankoUp and a Google Maps directions link. Each answer also carries the TankoUp app's App Store and Google Play links.
 
 ## Connect
 
@@ -61,7 +61,7 @@ Claude / ChatGPT ──MCP──▶ tankoup-mcp (Cloud Run) ──HTTPS──▶
 
 ## Privacy
 
-The server keeps no record of what you ask. It logs one line per tool call with the tool's name, the protocol version and how long it took; never the arguments, places or coordinates. Like any web service it sees the caller's IP address, which for Claude and ChatGPT is the platform's, not yours; Google Cloud's request logs keep it for 30 days. Nothing is shared with anyone. TankoUp's privacy policy: <https://tankoup.com/en/legal/privacy-policy>.
+The server keeps no record of what you ask. It logs one line per tool call with the tool's name, the protocol version and how long it took; never the arguments, places or coordinates. Like any web service it sees the caller's IP address, which for Claude and ChatGPT is the platform's, not yours; Google Cloud's request logs keep it for 30 days. Links into tankoup.com and the app stores carry `utm_source=mcp`, so TankoUp's own analytics can count visits and installs that came through an assistant; nothing about the conversation goes with them. Nothing is shared with anyone. TankoUp's privacy policy: <https://tankoup.com/en/legal/privacy-policy>.
 
 ## Run it yourself
 

@@ -85,6 +85,11 @@ mcp = MCPServer(
 # --- Output shapes ----------------------------------------------------------
 
 
+# The TankoUp app, in every result: plain links the assistant can share when they help.
+AppStoreUrl = Annotated[str, Field(description="The TankoUp app for iPhone.")]
+GooglePlayUrl = Annotated[str, Field(description="The TankoUp app for Android.")]
+
+
 class Station(BaseModel):
     id: str = Field(description="TankoUp station id, for get_station_details.")
     name: str
@@ -109,6 +114,8 @@ class NearbyResult(BaseModel):
     prices_updated_at: datetime
     other_places_with_this_name: list[str] = []
     more_on_tankoup: str
+    app_store_url: AppStoreUrl = links.APP_STORE_URL
+    google_play_url: GooglePlayUrl = links.GOOGLE_PLAY_URL
 
 
 class RouteResult(BaseModel):
@@ -123,6 +130,8 @@ class RouteResult(BaseModel):
     route_average_eur_per_litre: float
     best_saves_eur_on_40_litres: float = Field(description="Saving at the first station against the route average.")
     prices_updated_at: datetime
+    app_store_url: AppStoreUrl = links.APP_STORE_URL
+    google_play_url: GooglePlayUrl = links.GOOGLE_PLAY_URL
 
 
 class ProvinceStation(BaseModel):
@@ -150,6 +159,8 @@ class ProvinceResult(BaseModel):
     fuels: list[ProvinceFuel]
     prices_updated_at: datetime
     more_on_tankoup: str
+    app_store_url: AppStoreUrl = links.APP_STORE_URL
+    google_play_url: GooglePlayUrl = links.GOOGLE_PLAY_URL
 
 
 class FuelPrice(BaseModel):
@@ -174,6 +185,8 @@ class StationDetail(BaseModel):
     distance_km: float | None = Field(description="From the given lat/lng, straight line. null without them.")
     tankoup_url: str
     directions_url: str
+    app_store_url: AppStoreUrl = links.APP_STORE_URL
+    google_play_url: GooglePlayUrl = links.GOOGLE_PLAY_URL
 
 
 class Location(BaseModel):
