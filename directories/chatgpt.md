@@ -10,7 +10,8 @@ Submitted from the OpenAI Platform dashboard, "With MCP". Requirements checked a
 - [x] No server headers to declare
 - [x] Domain verification ready: the server answers `GET /.well-known/openai-apps-challenge` with the token in `OPENAI_APPS_CHALLENGE` (set it on Cloud Run when the dashboard gives one, then redeploy)
 - [x] Tested in ChatGPT as a custom MCP server on a Free account (`docs/screenshots/chatgpt-route.png`)
-- [ ] Demo recording, reachable by the reviewer (`demo_recording_url`)
+- [x] Demo recording, reachable by the reviewer (`demo_recording_url`): <https://github.com/aalzres/tankoup-mcp/releases/download/v0.1.0/chatgpt-demo.mp4>, 85 s in ChatGPT going through the 8 test cases below
+- [x] Package: `directories/chatgpt-plugin/` (Codex manifest with the listing, review cases and release notes; no `.app.json`, which submissions reject), zipped by `scripts/build-chatgpt-plugin.sh`
 
 ## Listing
 

@@ -1,0 +1,112 @@
+{
+  "name": "tankoup",
+  "version": "1.0.0",
+  "description": "Cheapest fuel in Spain: near a place, along a route, by province and per station.",
+  "author": {
+    "name": "TankoUp",
+    "url": "https://tankoup.com"
+  },
+  "homepage": "https://tankoup.com",
+  "repository": "https://github.com/aalzres/tankoup-mcp",
+  "license": "MIT",
+  "keywords": [
+    "fuel",
+    "petrol",
+    "diesel",
+    "gas prices",
+    "Spain",
+    "road trip"
+  ],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "TankoUp",
+    "shortDescription": "Cheapest fuel in Spain",
+    "longDescription": "TankoUp finds where to fill up for less in Spain. Ask for the cheapest diesel near a town, the best place to stop on a road trip, or how petrol prices in a province compare with the rest of the country, and get current prices from the Spanish government's open data (MITECO), refreshed every 4 hours.\n\nIt covers about 12,000 petrol stations in mainland Spain, the Balearic and Canary Islands, Ceuta and Melilla, and six fuels: diesel, premium diesel, 95 E5 and E10 petrol, 98 petrol and LPG. Stations are ranked by what a fill really costs: the pump price plus the fuel burned getting there. Each answer lists a few stations with their price per litre, distance, whether they are open now, and links to TankoUp and to directions.\n\nWho it is for: drivers in Spain, residents and visitors alike.\n\nLimitations: Spain only. Places are Spanish towns and cities by name, or any point by coordinates; streets and landmarks need coordinates. Prices are as reported by stations to the government and can lag a few hours. It shows prices; it does not sell or reserve fuel.",
+    "developerName": "TankoUp",
+    "category": "Travel",
+    "capabilities": [],
+    "websiteURL": "https://tankoup.com",
+    "supportURL": "https://github.com/aalzres/tankoup-mcp/issues",
+    "privacyPolicyURL": "https://tankoup.com/en/legal/privacy-policy",
+    "termsOfServiceURL": "https://tankoup.com/en/legal/terms-of-use",
+    "defaultPrompt": [
+      "Where is the cheapest diesel near me in Spain right now?",
+      "I'm driving from Madrid to Valencia. Where should I fill up with 95?",
+      "How do petrol prices in Barcelona compare with the rest of Spain?"
+    ],
+    "brandColor": "#0E0E0C",
+    "brandColorDark": "#C6FF3D",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Cheapest fuel near a town, by name",
+              "prompt": "Where is the cheapest diesel near Lucena, Córdoba?",
+              "tools_triggered": [
+                "find_cheapest_fuel_nearby"
+              ],
+              "expected_behavior": "Lists up to 5 stations in or near Lucena, best first by total cost, each with price per litre, distance, whether it is open now and links; mentions the saving against the area average."
+            },
+            {
+              "description": "Where to refuel on a road trip",
+              "prompt": "I'm driving from Madrid to Valencia tomorrow. Where should I stop for 95 petrol?",
+              "tools_triggered": [
+                "find_cheapest_fuel_on_route"
+              ],
+              "expected_behavior": "Gives the route length and duration, and the best stations within about 3 km of the route with their prices and a Google Maps link through each station."
+            },
+            {
+              "description": "Province compared with the rest of Spain",
+              "prompt": "How does the price of diesel in Bizkaia compare with the rest of Spain?",
+              "tools_triggered": [
+                "get_province_fuel_prices"
+              ],
+              "expected_behavior": "Gives Bizkaia's average and lowest diesel price, its difference with the Spanish average in percent, its 30-day change and its cheapest stations."
+            },
+            {
+              "description": "Follow-up on one station",
+              "prompt": "Where is the cheapest diesel near Lucena, Córdoba? Then: what are the opening hours and all the prices at the first one?",
+              "tools_triggered": [
+                "find_cheapest_fuel_nearby",
+                "get_station_details"
+              ],
+              "expected_behavior": "After the list, shows the first station's opening hours, every fuel it sells with its price, and its address."
+            },
+            {
+              "description": "Coordinates, radius and open-now filter",
+              "prompt": "Find LPG within 20 km of the Sagrada Família that is open now.",
+              "tools_triggered": [
+                "find_cheapest_fuel_nearby"
+              ],
+              "expected_behavior": "Calls the tool with latitude and longitude, a 20 km radius and open_now; lists open stations selling LPG near Barcelona, or says clearly that none is within 20 km."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Outside Spain: TankoUp only covers Spain, so it should not invent prices",
+              "prompt": "What's the cheapest petrol in Lisbon?"
+            },
+            {
+              "description": "Car maintenance, not fuel prices or stations: no tool call",
+              "prompt": "How often should I change my car's oil?"
+            },
+            {
+              "description": "Buying fuel: TankoUp shows prices and cannot pay, reserve or order",
+              "prompt": "Pay for 40 litres at the cheapest station near me."
+            }
+          ]
+        },
+        "demo_recording_url": "https://github.com/aalzres/tankoup-mcp/releases/download/v0.1.0/chatgpt-demo.mp4",
+        "commerce": false
+      },
+      "publication": {
+        "release_notes": "First release: four read-only tools for Spain's fuel prices — nearby, along a route, by province, and station details."
+      }
+    }
+  }
+}
