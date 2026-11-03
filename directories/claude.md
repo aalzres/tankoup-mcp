@@ -1,6 +1,6 @@
 # Claude Connectors Directory — submission
 
-Submitted at <https://claude.ai/directory/manage> → Submit new → MCP connector. Requirements checked against <https://claude.com/docs/connectors/building/submission> and the review checklist (November 2026).
+Submitted at <https://claude.ai/directory/manage> → Submit new → MCP connector, on 3 November 2026. Status: in review. Requirements checked against <https://claude.com/docs/connectors/building/submission> and the review checklist (November 2026).
 
 ## Pre-submission checklist
 
@@ -13,7 +13,7 @@ Submitted at <https://claude.ai/directory/manage> → Submit new → MCP connect
 - [x] Calls only TankoUp's own API (first party)
 - [x] Tested in MCP Inspector
 - [x] Tested as a custom connector in Claude: all four tools, in English and Spanish (screenshots in `docs/screenshots/claude-*.png`)
-- [ ] Privacy policy covers the MCP server (section to add to tankoup.com: `directories/privacy-section.md`)
+- [x] Privacy policy covers the MCP server (section 2.5 of tankoup.com's policy, in all eight languages)
 
 ## 1. Connection
 
