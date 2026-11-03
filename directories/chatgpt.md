@@ -1,5 +1,7 @@
 # ChatGPT app directory — submission
 
+**Status (3 November 2026): on hold.** Organization verification needs a default payment method, and a new API account only takes one with a prepaid credit purchase (minimum $5). Everything else below is ready; ChatGPT users can add the server by hand in developer mode (see the README).
+
 Submitted from the OpenAI Platform dashboard, "With MCP". Requirements checked against <https://developers.openai.com/apps-sdk/deploy/submission> (November 2026).
 
 ## Before submitting
